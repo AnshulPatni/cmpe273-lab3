@@ -9,7 +9,7 @@ class Helloer(DatagramProtocol):
 
         self.transport.connect(host, port)
         print ("now we can only send to host %s port %d" % (host, port))
-        self.transport.write("hello".encode())
+        self.transport.write("Hello World".encode())
 
     def datagramReceived(self, data, host):
         print ("received %r from %s" % (data.decode(), host))
